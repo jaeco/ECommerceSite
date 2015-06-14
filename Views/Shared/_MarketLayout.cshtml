@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles/MarketSS.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<nav>
+        @Html.ActionLink("Home", "Index", "Home") @*, new { area = "" }, new { @class = "navbar-brand" }*@
+        @Html.ActionLink("Market", "Market", "Market")
+        @Html.ActionLink("Login", "Index", "Home")
+        @Html.ActionLink("Register", "Index", "Home")
+        @Html.ActionLink("CP", "Index", "Home")
+</nav>
+<header>
+    <a href="~/Home/Index"><img src="~/Content/Images/logo.png" /></a>
+</header>
+<body>
+    @RenderBody()
+</body>
+<footer>Website By:  James Corkran &copy; DarkEden 2015</footer>
+</html>

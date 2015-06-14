@@ -19,17 +19,8 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-#welcome_header{
-    font-size: 40px;
-    font-weight: 800;
-}
-#welcome_content{
-    text-align: justify;
-    font-size: 20px;
-}
-
 html{
-    background-image:url("../Images/common0_bg02.jpg");
+    background-image:url("../Images/common_bg00004.jpg");
     margin: 0 auto !important;
     float: none !important;
     min-width: 1000px;
@@ -43,12 +34,8 @@ body{
 .home_container{
     margin-left: 30%;
     position: absolute;
-    width: 730px;
+    width: 800px;
     height: 500px;
-    text-align: justify;
-    background-image: url("../Images/Common_Background.png");
-    color: whitesmoke;
-
 }
 
 header img{
@@ -68,6 +55,10 @@ nav{
     margin-top: 0%;
 }
 
+th{
+    padding-left: 5px;
+}
+
 nav a{
     color: black;
     font-size: 14pt;
@@ -83,6 +74,38 @@ nav ul{
     margin: 0;
     font-family: 'Century Gothic';
 }
+
+#management_link{
+    position: relative;
+    top: 300px;
+}
+
+#catalog{
+    left: 80px;
+    position: absolute;
+}
+
+.itemclass_header{
+    font-size: 30px;
+}
+
+#vampItems{
+    position: relative;
+    height: 100px;
+}
+
+.itemMarket figure{
+    position: relative;
+    display:inline-block;
+    left: 40px;
+    width:100px;
+    height:100px;
+    padding-right: 80px;
+    text-align: center;
+}
+
+
+
 footer{
     text-align:center;
     color: #000;
@@ -90,4 +113,3 @@ footer{
     left: 30%;
     position: fixed;
 }
-

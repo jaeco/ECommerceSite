@@ -1,0 +1,21 @@
+﻿.Items{
+    padding-top:15px;
+    padding-bottom:10px;
+    float:left;
+    text-align:center;
+    margin: auto;
+    margin-left: 20px;
+    color:#fff;
+    z-index:5;
+}
+.Items img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 130px;
+    height:150px;
+}
+
+h2{
+    font-size: 20pt;
+}

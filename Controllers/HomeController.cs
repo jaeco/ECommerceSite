@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ECommerceSite.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,20 +11,15 @@ namespace ECommerceSite.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var list = new EcommerceEntities1();
+            var items = list.Products.Take(3);
+
+            return View(items.ToList());
+            //return View();
         }
 
-        public ActionResult About()
+        public ActionResult Market()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

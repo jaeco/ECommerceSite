@@ -1,0 +1,38 @@
+﻿@model ECommerceSite.Models.Product
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_ProductLayout.cshtml";
+}
+<div class="home_container">
+    <div id="catalog">
+        <h1 class="itemclass_header">Item:  @Model.Name</h1>
+        <a href="~/Items/Edit/@Model.Id">Edit Item</a>
+        <hr />
+        <div id="vampItems">
+            <div class="itemMarket">
+                <div id="product_image">
+                    <img src="~/Content/Images/@Model.Image" />
+                </div>
+                <div id="product_info">
+                    <label>Price: @Model.Price</label>
+                    <br />
+                    <br />
+                    <label>Description: @Model.Description</label>
+                    <br />
+                    <br />
+                    <label>Features:</label>
+                    <ul>
+                        @{
+                            var features = Model.Features.Split(',');
+                            foreach (var f in features)
+                            {
+                                <li>@f</li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -19,17 +19,8 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-#welcome_header{
-    font-size: 40px;
-    font-weight: 800;
-}
-#welcome_content{
-    text-align: justify;
-    font-size: 20px;
-}
-
 html{
-    background-image:url("../Images/common0_bg02.jpg");
+    background-image:url("../Images/common_bg00004.jpg");
     margin: 0 auto !important;
     float: none !important;
     min-width: 1000px;
@@ -45,10 +36,8 @@ body{
     position: absolute;
     width: 730px;
     height: 500px;
-    text-align: justify;
     background-image: url("../Images/Common_Background.png");
     color: whitesmoke;
-
 }
 
 header img{
@@ -83,6 +72,59 @@ nav ul{
     margin: 0;
     font-family: 'Century Gothic';
 }
+
+#catalog{
+    left: 80px;
+    position: absolute;
+}
+
+#management_link{
+    position: relative;
+    top: 300px;
+}
+
+#product_image img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+#product_info{
+    position: absolute;
+    left: 300px;
+    width: 300px;
+    font-size: 18px;
+}
+
+#product_info label{
+    text-align: justify;
+}
+
+#product_info ul{
+    list-style-position: inside;
+}
+
+.itemclass_header{
+    font-size: 30px;
+}
+
+#vampItems{
+    position: relative;
+    height: 100px;
+}
+
+.itemMarket figure{
+    position: relative;
+    display:inline-block;
+    left: 40px;
+    width:100px;
+    height:100px;
+    padding-right: 80px;
+    text-align: center;
+}
+
+
+
 footer{
     text-align:center;
     color: #000;
@@ -90,4 +132,3 @@ footer{
     left: 30%;
     position: fixed;
 }
-
