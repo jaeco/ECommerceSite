@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Market";
+    ViewBag.Layout = "~/Shared/_MarketLayout.cshtml";
+}
+<link href="~/Content/Styles/MarketSS.css" type="text/css" rel="stylesheet" />
+<div class="home_container">
+    <div id="catalog">
+        <h1 class="itemclass_header">Vampire Class Items</h1>
+        <hr />
+        <div id="vampItems">
+            <div class="itemMarket">
+                
+                @foreach (var i in ViewData.Model)
+                {
+                 <figure>
+                     <a href="~/Market/Product/@i.Id"><img src="~/Content/Images/@i.Image" /></a>
+                     <figcaption>Item:  @i.Name</figcaption>
+                     <figcaption>Price:  @i.Price</figcaption>
+                     <button>Purchase</button>
+                     <a href="~/Items/Edit/@i.Id">Edit Item</a>
+                 </figure>   
+                }
+            </div>
+        </div>
+        <div id="management_link">
+            @Html.ActionLink("Manage Items", "ItemIndex","Items")
+        </div>
+    </div>
+</div>

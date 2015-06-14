@@ -1,0 +1,44 @@
+﻿@model ECommerceSite.Models.Product
+
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+}
+<div class="home_container">
+    <div id="catalog">
+        <h1 class="itemclass_header">Editing Item:  @Model.Name</h1>
+        <div id="vampItems">
+            @*@using (Html.BeginForm())
+            {
+                <h4>Edit</h4>
+                <hr />
+                <div>
+                    @Html.LabelFor(model => model.Name)
+                    @Html.EditorFor(model => model.Name)
+                </div><div>
+                    @Html.LabelFor(model => model.Price)
+                    @Html.EditorFor(model => model.Price)
+                </div><div>
+                    @Html.LabelFor(model => model.Description)
+                    @Html.EditorFor(model => model.Description)
+                </div><div>
+                    @Html.LabelFor(model => model.Image)
+                    @Html.EditorFor(model => model.Image)
+                </div><div>
+                    @Html.LabelFor(model => model.Features)
+                    @Html.EditorFor(model => model.Features)
+                </div>
+                <br />
+                <input type="submit" value="Edit" />
+                <input type="submit" value="Delete" />
+            }*@
+            @using (Html.BeginForm())
+            {
+                @Html.EditorForModel()
+                <br />
+                <input type="submit" value="Save" />
+                @Html.ActionLink("Cancel", "ItemIndex", "Items")
+            }
+        </div>
+    </div>
+</div>
