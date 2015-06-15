@@ -9,13 +9,14 @@ namespace ECommerceSite.Controllers
 {
     public class HomeController : Controller
     {
+        ProductRepo repository = new ProductRepo();
+
         public ActionResult Index()
         {
-            var list = new EcommerceEntities1();
-            var items = list.Products.Take(3);
+            var list = repository.GetAllProducts();
+            var items = list.Take(3);
 
             return View(items.ToList());
-            //return View();
         }
 
         public ActionResult Market()
