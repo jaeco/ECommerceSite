@@ -57,6 +57,12 @@ nav{
     margin-top: 0%;
 }
 
+.editor-field { margin-bottom: .8em; }
+.editor-label { font-weight: bold; }
+.editor-label:after { content: ":" }
+.text-box { width: 25em; }
+.multi-line { height: 5em; font-family: Segoe UI, Verdana; }
+
 nav a{
     color: black;
     font-size: 14pt;

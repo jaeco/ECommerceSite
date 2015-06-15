@@ -9,26 +9,25 @@ namespace ECommerceSite.Controllers
 {
     public class MarketController : Controller
     {
+        ProductRepo repository = new ProductRepo();
+
         public ActionResult Market()
         {
-            var list = new EcommerceEntities1();
-            var items = list.Products.Where(i => i.Id != null);
+            var list = repository.GetAllProducts();
+            var items = list.Where(i => i.Id != null);
 
             return View(items.ToList());
         }
 
         public ActionResult Product(int id)
         {
-            var list = new EcommerceEntities1();
-            var item = list.Products.Where(i => i.Id == id && i.Id != null).First();
-
-            return View(item);
+            return View(repository.GetProduct(id));
         }
 
         public ActionResult Edit(int id)
         {
-            var list = new EcommerceEntities1();
-            var item = list.Products.Where(i => i.Id == id && i.Id != null).First();
+            var list = repository.GetAllProducts();
+            var item = list.Where(i => i.Id != null).First();
 
             return View(item);
         }
