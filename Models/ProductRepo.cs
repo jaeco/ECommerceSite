@@ -8,7 +8,8 @@ namespace ECommerceSite.Models
 {
     public class ProductRepo
     {
-        private ProductContextDataContext db = new ProductContextDataContext();
+        private ProductDBDataContext db = new ProductDBDataContext();
+        //private EcommerceEntities db = new EcommerceEntities();
 
         //Query methods
 

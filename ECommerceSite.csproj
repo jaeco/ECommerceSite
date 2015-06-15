@@ -185,12 +185,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ControllerHelper.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ProductContext.designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductDB.designer.cs">
+      <DependentUpon>ProductDB.dbml</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProductContext.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Models\ProductRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,8 +217,6 @@
     <Content Include="Content\Styles\ManageSS.css" />
     <Content Include="Content\Styles\ProductSS.css" />
     <Content Include="Content\Styles\MarketSS.css" />
-    <Content Include="Content\Styles\PartialMarketSS.css" />
-    <Content Include="Content\Styles\PartialSMarketSS.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -241,9 +241,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Models\ProductContext.dbml">
+    <Content Include="Models\ProductDB.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>ProductContext.designer.cs</LastGenOutput>
+      <LastGenOutput>ProductDB.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -306,6 +306,8 @@
     <Content Include="Views\Items\Edit.cshtml" />
     <Content Include="Views\Items\ItemIndex.cshtml" />
     <Content Include="Views\Shared\_ManageLayout.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Deleted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -319,8 +321,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\ProductContext.dbml.layout">
-      <DependentUpon>ProductContext.dbml</DependentUpon>
+    <None Include="Models\ProductDB.dbml.layout">
+      <DependentUpon>ProductDB.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

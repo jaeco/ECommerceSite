@@ -6,15 +6,18 @@
 }
 <div class="home_container">
     <div id="catalog">
-        <h1 class="itemclass_header">Editing Item:  @Model.Name</h1> <a href="~/Items/Delete/@Model.Id">Delete Item</a>
+        <h1 class="itemclass_header">Remove @Model.Name?</h1>
         <div id="vampItems">
+            <h2>Please confirm you wish to remove item:</h2>
+            <ul>
+                <li><h3>@Model.Name</h3></li>
+            </ul>
             @using (Html.BeginForm())
             {
-                @Html.EditorForModel()
-                <br />
                 if (User.Identity.IsAuthenticated)
                 {
-                    <input type="submit" value="Save" />
+
+                    <input name="confirmButton" type="submit" value="Delete" />
                     @Html.ActionLink("Cancel", "ItemIndex", "Items")
                 }
             }

@@ -12,7 +12,7 @@
             <div class="itemMarket">
                 <table>
                     <tr>
-                        <th>Id</th>
+                        <th> </th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Description</th>
@@ -20,22 +20,27 @@
                         <th>Features</th>
                     </tr>
                     @foreach (var i in Model)
-                    { 
+                    {
                         <tr>
-                            <td>@Html.DisplayFor(modelItem => i.Id)</td>
+                            @if (User.IsInRole("admin"))
+                            {
+                                <td><a href="~/Items/Edit/@i.Id">Edit</a> <a href="~/Items/Delete/@i.Id">Del</a></td>
+                            }
                             <td>@Html.DisplayFor(modelItem => i.Name)</td>
                             <td>@Html.DisplayFor(modelItem => i.Price)</td>
                             <td>@Html.DisplayFor(modelItem => i.Description)</td>
                             <td>@Html.DisplayFor(modelItem => i.Image)</td>
                             <td>@Html.DisplayFor(modelItem => i.Features)</td>
-                            <td><a href="~/Items/Edit/@i.Id">Edit</a></td>
                         </tr>
                     }
                 </table>
             </div>
         </div>
-        <div id="management_link">
-            @Html.ActionLink("Add Item", "Add", "Items")
-        </div>
+        @if (User.IsInRole("admin"))
+        {
+            <div id="management_link">
+                @Html.ActionLink("Add Item", "Add", "Items")
+            </div>
+        }
     </div>
 </div>

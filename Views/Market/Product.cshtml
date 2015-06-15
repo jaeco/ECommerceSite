@@ -6,7 +6,10 @@
 <div class="home_container">
     <div id="catalog">
         <h1 class="itemclass_header">Item:  @Model.Name</h1>
-        <a href="~/Items/Edit/@Model.Id">Edit Item</a>
+        @if (User.IsInRole("admin"))
+        {
+            <a href="~/Items/Edit/@Model.Id">Edit Item</a>
+        }
         <hr />
         <div id="vampItems">
             <div class="itemMarket">

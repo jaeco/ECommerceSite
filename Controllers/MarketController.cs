@@ -24,6 +24,7 @@ namespace ECommerceSite.Controllers
             return View(repository.GetProduct(id));
         }
 
+        [Authorize(Roles="admin")]
         public ActionResult Edit(int id)
         {
             var list = repository.GetAllProducts();

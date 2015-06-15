@@ -105,4 +105,3 @@ D:\James Corkran\Documents\GitHub\ECommerceSite\bin\System.Web.WebPages.Razor.xm
 D:\James Corkran\Documents\GitHub\ECommerceSite\bin\System.Web.Optimization.xml
 D:\James Corkran\Documents\GitHub\ECommerceSite\obj\Debug\ECommerceSite.dll
 D:\James Corkran\Documents\GitHub\ECommerceSite\obj\Debug\ECommerceSite.pdb
-D:\James Corkran\Documents\GitHub\ECommerceSite\obj\Debug\ECommerceSite.csprojResolveAssemblyReference.cache
