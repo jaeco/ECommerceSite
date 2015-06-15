@@ -1,5 +1,5 @@
 ﻿html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1,h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -31,6 +31,13 @@ body{
     max-height: 1000px;
 }
 
+.home_container a:link{
+    color: #ffd800;
+}
+.home_container a:visited{
+    color: #ff4f36;
+}
+
 .home_container{
     margin-left: 30%;
     position: absolute;
@@ -57,12 +64,6 @@ nav{
     margin-top: 0%;
 }
 
-.editor-field { margin-bottom: .8em; }
-.editor-label { font-weight: bold; }
-.editor-label:after { content: ":" }
-.text-box { width: 25em; }
-.multi-line { height: 5em; font-family: Segoe UI, Verdana; }
-
 nav a{
     color: black;
     font-size: 14pt;
@@ -70,7 +71,12 @@ nav a{
 }
 
 nav a:link{
+    color: black;
+    font-size: 14pt;
+    font-weight: bold;
+    padding-right: 20px;
     text-decoration:none;
+    font-family: 'Century Gothic';
 }
 nav ul{
     list-style-type: none;
@@ -78,6 +84,16 @@ nav ul{
     margin: 0;
     font-family: 'Century Gothic';
 }
+.navbar-right {
+    float: right !important;
+}
+
+.editor-field { margin-bottom: .8em; }
+.editor-label { font-weight: bold; }
+.editor-label:after { content: ":" }
+.text-box { width: 25em; }
+.multi-line { height: 5em; font-family: Segoe UI, Verdana; }
+.input-validation-error.text-box{ border: 1px solid #ff0000; background-color: #ffeeee;}
 
 #catalog{
     left: 80px;

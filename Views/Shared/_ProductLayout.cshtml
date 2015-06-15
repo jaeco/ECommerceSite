@@ -7,11 +7,12 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <nav>
-        @Html.ActionLink("Home", "Index", "Home") @*, new { area = "" }, new { @class = "navbar-brand" }*@
-        @Html.ActionLink("Market", "Market", "Market")
-        @Html.ActionLink("Login", "Index", "Home")
-        @Html.ActionLink("Register", "Index", "Home")
-        @Html.ActionLink("CP", "Index", "Home")
+    @Html.ActionLink("Home", "Index", "Home")
+    @Html.ActionLink("Market", "Market", "Market")
+    @*@Html.ActionLink("Login", "Login", "Account")
+        @Html.ActionLink("Register", "Register", "Account")*@
+    @Html.ActionLink("Control Panel", "Index", "Home")
+    @Html.Partial("_LoginPartial")
 </nav>
 <header>
     <a href="~/Home/Index"><img src="~/Content/Images/logo.png" /></a>

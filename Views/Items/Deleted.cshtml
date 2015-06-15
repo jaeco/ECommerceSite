@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Deleted";
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+}
+
+<div class="home_container">
+    <div id="catalog">
+        <h1 class="itemclass_header">Item Deleted</h1>
+        <div id="vampItems">
+            @Html.ActionLink("Return", "ItemIndex", "Items")
+        </div>
+    </div>
+</div>
